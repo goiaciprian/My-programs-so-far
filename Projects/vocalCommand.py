@@ -20,7 +20,7 @@ def getCommand():  # gets input through the mic and convert it to text
             return None
 
 
-def show(command: str):  # shows different notofocations
+def show(command: str):  # shows different notifications
     if command == "Google":
         NOTIFICATION.show_toast("Vocal Command", "Se deshide Google...")
     elif command == "epic":
@@ -64,4 +64,4 @@ if __name__ == "__main__":  # Only when the sript is runed
         else:
             import time
             runTimes += 1
-            time.sleep(5)
+            time.sleep(3)
