@@ -22,12 +22,12 @@ def getCommand():  # gets input through the mic and convert it to text
 
 def show(command: str):  # shows different notifications
     if command == "Google":
-        NOTIFICATION.show_toast("Vocal Command", "Se deshide Google...")
+        NOTIFICATION.show_toast("Vocal Command", "Se deshide Google...", duration=3)
     elif command == "epic":
         NOTIFICATION.show_toast(
-                "Vocal Command", "Se deshide Epic Games...")
+                "Vocal Command", "Se deshide Epic Games...", duration=3)
     elif command == "ieșire":
-        NOTIFICATION.show_toast("Vocal Command", "Programul se inhide ...")
+        NOTIFICATION.show_toast("Vocal Command", "Programul se inchide ...", duration=3)
 
 
 def openGoogle():  # open google
@@ -64,4 +64,5 @@ if __name__ == "__main__":  # Only when the sript is runed
         else:
             import time
             runTimes += 1
+            NOTIFICATION.show_toast("Vocal Command", "Nu am inteles ...", duration=3)
             time.sleep(3)
